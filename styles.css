@@ -214,7 +214,7 @@ p {
 /* Footer Styles */
 .footer {
   background-color: #333;
-  color: #ffff;
+  color: #333;
   text-align: center;
   padding: 1em 0;
 }
@@ -257,10 +257,10 @@ p {
   display: none; /* Hide both forms initially */
 }
 
-/* Show active form when radio button is checked  */
+/* Show active form when radio button is checked */
 #signin-tab:checked ~ .signin-form,
 #signup-tab:checked ~ .signup-form {
-  display: block;
+  display: block; /* Display the selected form */
 }
 
 /* Form Styles */
@@ -408,4 +408,280 @@ button[type="submit"]:hover {
   .grid {
     grid-template-columns: 1fr; /* Display 1 card per row for screens below 480px */
   }
+}
+
+/* Product Features Comparison Table Styles */
+.product-features {
+  padding: 4em 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.product-features h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.comparison-table {
+  width: 100%;
+  margin-top: 2em;
+  border-collapse: collapse; /* Collapse borders to prevent double borders */
+  border: 2px solid #ff6347; /* Border color */
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1em;
+  border: 1px solid #dddddd; /* Border color */
+}
+
+.comparison-table th {
+  background-color: #ff6347;
+  color: #fff;
+  font-weight: bold;
+}
+
+.comparison-table td {
+  text-align: center;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none; /* Remove bottom border for last row */
+}
+
+/* Categories Section Styles */
+
+/* Styling the container for the categories */
+.categories {
+  padding: 4em 0; /* Padding around the entire section */
+  text-align: center; /* Center-aligning text within the section */
+}
+
+/* Styling for the heading within the categories section */
+.categories h2 {
+  font-size: 2em; /* Font size for the heading */
+  margin-bottom: 1em; /* Bottom margin to separate from other elements */
+}
+
+/* Grid layout for the categories */
+.grid {
+  display: grid; /* Using CSS grid for layout */
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 1.5em; /* Gap between grid items */
+}
+
+/* Styling for each category item */
+.category {
+  background-color: #fff; /* Background color */
+  padding: 1em; /* Padding around each category item */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  text-align: center; /* Center-aligning text and image */
+  font-size: 0.9em; /* Font size for text */
+  transition: transform 0.3s ease-in-out; /* Smooth scale transition on hover */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Styling for the category image */
+.category img {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-top: 1em; /* Top margin */
+  animation: fadeIn 0.5s ease-out forwards; /* Fade-in animation */
+}
+
+/* Styling for the category title */
+.category h3 {
+  font-size: 1em; /* Font size for the title */
+  margin: 0; /* Margin reset */
+}
+
+/* Hover effect on category items */
+.category:hover {
+  transform: scale(1.05); /* Scale up effect on hover */
+}
+
+/* Featured Products Section Styles */
+
+/* Styling the container for featured products */
+.featured-products {
+  padding: 4em 0; /* Padding around the entire section */
+  text-align: center; /* Center-aligning text within the section */
+}
+
+/* Styling for the heading within the featured products section */
+.featured-products h2 {
+  font-size: 2em; /* Font size for the heading */
+  margin-bottom: 1em; /* Bottom margin to separate from other elements */
+}
+
+/* Grid layout for featured products */
+.featured-products .grid {
+  display: grid; /* Using CSS grid for layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Flexible columns */
+  gap: 1.5em; /* Gap between grid items */
+}
+
+/* Styling for each product item */
+.product {
+  background-color: #fff; /* Background color */
+  padding: 0.75em; /* Padding around each product item */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  text-align: center; /* Center-aligning text and image */
+  font-size: 0.9em; /* Font size for text */
+  transition: transform 0.3s ease-in-out; /* Smooth scale transition on hover */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Styling for the product image */
+.product img {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
+  animation: fadeIn 0.5s ease-out forwards; /* Fade-in animation */
+}
+
+/* Styling for the product title */
+.product h3 {
+  font-size: 1em; /* Font size for the title */
+  margin: 0.5em 0; /* Margin for spacing */
+}
+
+/* Styling for the product price */
+.product p {
+  font-size: 0.9em; /* Font size for the price */
+  color: #ff6347; /* Text color for the price */
+}
+
+/* Hover effect on product items */
+.product:hover {
+  transform: scale(1.05); /* Scale up effect on hover */
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(20px); /* Start position slightly below */
+  }
+  to {
+    opacity: 1; /* End with full opacity */
+    transform: translateY(0); /* End position */
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+.offer-text {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65em !important;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 4px 8px; /* Adjusted padding */
+  border-radius: 5px; /* Rounded corners */
+  animation: blink-animation 1s infinite !important; /* Flashing animation */
+  z-index: 3;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+
+/* Adjusting grid columns for tablets */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Testimonials Section */
+  .testimonials .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  /* Product Features Comparison Table */
+  .comparison-table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .comparison-table table {
+    width: 100%;
+    table-layout: auto;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 8px;
+    text-align: left;
+  }
+}
+
+/* Adjusting grid columns for mobile devices */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials Section */
+  .testimonials .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Product Features Comparison Table */
+  .comparison-table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .comparison-table table {
+    width: 100%;
+    table-layout: auto;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 8px;
+    text-align: left;
+  }
+}
+
+/* Keyframes for flash animation */
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply flash animation to heading and paragraph */
+.hero h2,
+.hero p {
+  animation: flash 2s forwards;
 }
